@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { fetchData } from './apiCalls'
+import { useEffect, useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Articles from './Components/Articles/Articles'
 
 function App() {
+  const [articles, setArticles] = useState([])
+  const [error, setError] = useState('')
+  const [loading, setIsLoading] = useState(false)
+
+  useEffect(() => {
+    loadArticles()
+  }, [])
+
+  const loadArticles = () => {
+    fetchData()
+      .then((data) => setArticles((prevArticles) => data.results))
+      .catch((error) => setError('No new news, try again later.'))
+  }
+
+  const setLoading = () => {
+    if (articles.length === 0) {
+      setIsLoading(true)
+    } else {
+      setIsLoading(false)
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <h1>Art News</h1>
+        <div className='component-container'>
+          <Routes>
+            <Route path='/' element={<Articles />} />
+          </Routes>
+        </div>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
