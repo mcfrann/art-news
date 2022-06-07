@@ -33,7 +33,7 @@ function App() {
         <h1>Art News</h1>
         <div className='component-container'>
           <Routes>
-            <Route path='/' element={<Articles />} />
+            <Route path='/' element={<Articles articles={articles} />} />
           </Routes>
         </div>
       </header>
