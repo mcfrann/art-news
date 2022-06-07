@@ -1,0 +1,21 @@
+.article-tile {
+  position: relative;
+  padding: 0;
+  margin-bottom: -1%;
+  position: relative;
+  height: 60vh;
+  width: 33.33vw;
+  background-color: pink;
+}
+
+.article-tile::background-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* .article-image::background-image {
+  height: 60vh;
+  width: 33.33vw;
+  object-fit: cover;
+} */
