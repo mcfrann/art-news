@@ -1,5 +1,4 @@
 import './ArticleTile.css'
-import arrow from '../../images/arrow.png'
 import { useNavigate } from 'react-router-dom'
 
 const ArticleTile = ({
