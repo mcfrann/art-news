@@ -1,21 +1,42 @@
 .article-tile {
-  position: relative;
   padding: 0;
   margin-bottom: -1%;
   position: relative;
-  height: 60vh;
+  height: 55vh;
   width: 33.33vw;
-  background-color: pink;
+  cursor: pointer;
 }
 
-.article-tile::background-image {
-  height: 100%;
-  width: 100%;
+.article-image {
+  height: 55vh;
+  width: 33.33vw;
   object-fit: cover;
 }
 
-/* .article-image::background-image {
-  height: 60vh;
+.content {
+  color: transparent;
+  background-color: transparent;
+  position: absolute;
+  height: 55vh;
   width: 33.33vw;
-  object-fit: cover;
-} */
+}
+
+.content:hover {
+  position: absolute;
+  background-color: #c93838;
+  text-align: right;
+  bottom: 0;
+  color: #fff;
+  height: 55vh;
+  opacity: 1;
+  transition: all 0.4s ease;
+  width: 33.33vw;
+}
+
+.info {
+  margin: 1.5em;
+}
+
+.arrow {
+  width: 2vw;
+}
