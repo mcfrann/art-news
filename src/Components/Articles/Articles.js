@@ -13,7 +13,7 @@ const Articles = ({ articles }) => {
       url={article.url}
       byline={article.byline}
       published={article.published_date}
-      image={article.multimedia[0].url}
+      image={article.multimedia[1].url}
       alt={article.multimedia[0].caption}
     />
   ))
