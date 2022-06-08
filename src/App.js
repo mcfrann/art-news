@@ -3,6 +3,7 @@ import { fetchData } from './apiCalls'
 import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Articles from './Components/Articles/Articles'
+import ArticlePage from './Components/ArticlePage/ArticlePage'
 
 function App() {
   const [articles, setArticles] = useState([])
@@ -34,6 +35,7 @@ function App() {
         <div className='component-container'>
           <Routes>
             <Route path='/' element={<Articles articles={articles} />} />
+            <Route path='/article' element={<ArticlePage />} />
           </Routes>
         </div>
       </header>
