@@ -9,6 +9,7 @@ function App() {
   const [articles, setArticles] = useState([])
   const [error, setError] = useState('')
   const [loading, setIsLoading] = useState(false)
+  const [currentArticle, setCurrentArticle] = useState(null)
 
   useEffect(() => {
     loadArticles()
@@ -34,8 +35,19 @@ function App() {
         <h1>Art News</h1>
         <div className='component-container'>
           <Routes>
-            <Route path='/' element={<Articles articles={articles} />} />
-            <Route path='/article' element={<ArticlePage />} />
+            <Route
+              path='/'
+              element={
+                <Articles
+                  articles={articles}
+                  setCurrentArticle={setCurrentArticle}
+                />
+              }
+            />
+            <Route
+              path='/article'
+              element={<ArticlePage currentArticle={currentArticle} />}
+            />
           </Routes>
         </div>
       </header>
