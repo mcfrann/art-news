@@ -1,12 +1,13 @@
 import './Articles.css'
 import ArticleTile from '../ArticleTile/ArticleTile'
 
-const Articles = ({ articles }) => {
+const Articles = ({ articles, setCurrentArticle }) => {
   let counter = 0
 
   const tiles = articles.map((article) => (
     <ArticleTile
-      key={counter++}
+      id={(counter += 1)}
+      key={counter}
       genre={article.section}
       title={article.title}
       abstract={article.abstract}
@@ -15,6 +16,8 @@ const Articles = ({ articles }) => {
       published={article.published_date}
       image={article.multimedia[1].url}
       alt={article.multimedia[0].caption}
+      setCurrentArticle={setCurrentArticle}
+      articles={articles}
     />
   ))
 
