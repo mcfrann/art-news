@@ -3,8 +3,9 @@ import './ArticlePage.css'
 const ArticlePage = ({ currentArticle }) => {
   return (
     <section className='selected-article'>
-      <h2>{currentArticle.title}</h2>
+      <h2 className='current-article-title'>{currentArticle.title}</h2>
       <img
+        className='current-article-image'
         src={currentArticle.multimedia[0].url}
         alt={currentArticle.multimedia[0].copyright}
       />
