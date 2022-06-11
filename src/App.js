@@ -1,7 +1,7 @@
 import './App.css'
 import { fetchData } from './apiCalls'
 import { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import Articles from './Components/Articles/Articles'
 import ArticlePage from './Components/ArticlePage/ArticlePage'
 import backArrow from './images/back-arrow.png'
@@ -11,6 +11,7 @@ function App() {
   const [error, setError] = useState('')
   const [loading, setIsLoading] = useState(false)
   const [currentArticle, setCurrentArticle] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     loadArticles()
@@ -30,7 +31,10 @@ function App() {
     }
   }
 
-  const navigateBack = () => {}
+  const navigateBack = () => {
+    setCurrentArticle(null)
+    navigate('/')
+  }
 
   return (
     <div className='App'>
