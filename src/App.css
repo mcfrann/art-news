@@ -6,6 +6,8 @@
 
 h1 {
   font-size: 4em;
+  text-decoration: underline;
+  text-decoration-color: #c93838;
 }
 
 h2,
@@ -13,4 +15,30 @@ h3,
 p {
   padding: 0;
   margin: 0;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.back-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15vw;
+}
+
+.back-arrow {
+  height: 35%;
+}
+
+.page-title {
+  width: 70vw;
+}
+
+.spacer {
+  width: 15vw;
 }
