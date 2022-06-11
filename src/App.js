@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Articles from './Components/Articles/Articles'
 import ArticlePage from './Components/ArticlePage/ArticlePage'
+import Footer from './Components/Footer/Footer'
 import backArrow from './images/back-arrow.png'
 
 function App() {
@@ -69,6 +70,7 @@ function App() {
           />
         </Routes>
       </div>
+      <Footer />
     </div>
   )
 }
