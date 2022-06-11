@@ -15,6 +15,7 @@ const ArticlePage = ({ currentArticle }) => {
         <a id='nytLink' href={currentArticle.url}>
           here
         </a>
+        .
       </p>
     </section>
   )

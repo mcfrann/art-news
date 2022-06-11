@@ -1,0 +1,32 @@
+footer {
+  height: 100%;
+  width: 100%;
+  color: white;
+  position: bottom;
+}
+
+.resources {
+  text-align: left;
+  background-color: black;
+  padding: 3em;
+}
+
+.site-info {
+  background-color: #c93838;
+  padding: 0.7em;
+  text-align: left;
+  padding-left: 3em;
+}
+
+a {
+  color: #c93838;
+  text-decoration: none;
+}
+
+.github-link {
+  color: black;
+}
+
+.credit {
+  margin-bottom: 0.5em;
+}
