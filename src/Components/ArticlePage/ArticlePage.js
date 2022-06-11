@@ -11,7 +11,10 @@ const ArticlePage = ({ currentArticle }) => {
       />
       <p className='abstract'>{currentArticle.abstract}</p>
       <p className='nyt-link'>
-        Read the full article here: {currentArticle.url}
+        Read the full article with a subscription{' '}
+        <a id='nytLink' href={currentArticle.url}>
+          here
+        </a>
       </p>
     </section>
   )
