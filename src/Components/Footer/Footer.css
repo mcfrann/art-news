@@ -8,14 +8,14 @@ footer {
 .resources {
   text-align: left;
   background-color: black;
-  padding: 5em;
+  padding: 3em;
 }
 
 .site-info {
   background-color: #c93838;
   padding: 0.7em;
   text-align: left;
-  padding-left: 5em;
+  padding-left: 3em;
 }
 
 a {
@@ -25,4 +25,8 @@ a {
 
 .github-link {
   color: black;
+}
+
+.credit {
+  margin-bottom: 0.5em;
 }
