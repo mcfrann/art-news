@@ -1,0 +1,17 @@
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 12vw;
+  margin-bottom: 1vh;
+}
+
+.search-icon {
+  /* height: 3vh; */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* * {
+  border: 1px solid blue;
+} */

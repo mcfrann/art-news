@@ -12,14 +12,14 @@ const ArticleTile = ({
   image,
   alt,
   setCurrentArticle,
-  articles
+  filtered
 }) => {
   const navigate = useNavigate()
 
   const directToArticle = (e) => {
     const targ = e.currentTarget.id - 1
-    console.log('one article', articles[targ])
-    setCurrentArticle((prevArticle) => articles[targ])
+    console.log('one article', filtered[targ])
+    setCurrentArticle((prevArticle) => filtered[targ])
     navigate(`/article`)
   }
 
