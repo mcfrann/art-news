@@ -31,3 +31,25 @@
   margin-bottom: 2em;
   width: 50vw;
 }
+
+/* ------------------ breakpoints ------------------ */
+
+@media screen and (max-width: 900px) {
+  .current-article-image {
+    height: 33vh;
+  }
+
+  .current-article-title {
+    width: 90vw;
+  }
+
+  .abstract {
+    font-size: 1.7em;
+    width: 80vw;
+  }
+
+  .nyt-link {
+    width: 80vw;
+    font-size: 1.3em;
+  }
+}

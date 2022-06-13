@@ -1,5 +1,4 @@
 .article-tile {
-  padding: 0;
   margin-bottom: -1%;
   position: relative;
   height: 55vh;
@@ -26,17 +25,33 @@
   background-color: #c93838;
   text-align: right;
   bottom: 0;
-  color: #fff;
+  color: #ffffff;
   height: 55vh;
+  width: 33.33vw;
   opacity: 1;
   transition: all 0.4s ease;
-  width: 33.33vw;
 }
 
 .info {
   margin: 1.5em;
 }
 
-.arrow {
-  width: 2vw;
+/* ------------------ breakpoints ------------------ */
+
+@media screen and (max-width: 900px) {
+  .article-tile,
+  .article-image,
+  .content,
+  .content:hover {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .article-tile,
+  .article-image,
+  .content,
+  .content:hover {
+    width: 100vw;
+  }
 }
