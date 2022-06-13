@@ -37,10 +37,6 @@ The goal of this project was to showcase my front-end development skills and hig
 
 ## Site Examples
 
-Main Page:
-
-![main](https://media.giphy.com/media/gdUEVzyGupxNCm54UJ/giphy.gif)
-
 Filter by sub-genre:
 
 ![filter](https://media.giphy.com/media/Ouw3KbzGWWDVfTkc2q/giphy.gif)
