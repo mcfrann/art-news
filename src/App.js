@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import Articles from './Components/Articles/Articles'
 import ArticlePage from './Components/ArticlePage/ArticlePage'
-import FilteredPage from './Components/FilteredPage/FilteredPage'
 import Footer from './Components/Footer/Footer'
 import Form from './Components/Form/Form'
 import ReactLoading from 'react-loading'
@@ -24,19 +23,15 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (input === 'All') {
-      setFiltered([])
-    }
-  }, [])
-
-  useEffect(() => {
     setLoading()
   }, articles)
 
   const loadArticles = () => {
     fetchData()
-      .then((data) => setArticles((prevArticles) => data.results))
-      .then(setIsLoading(false))
+      .then((data) => {
+        setArticles((prevArticles) => data.results)
+        setFiltered((prevFiltered) => data.results)
+      })
       .catch((error) => setError('No new news, try again later.'))
   }
 
@@ -53,6 +48,11 @@ function App() {
     navigate('/')
   }
 
+  const directHome = () => {
+    setFiltered(articles)
+    navigate('/')
+  }
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -66,36 +66,32 @@ function App() {
             />
           )}
         </div>
-        <h1 className='page-title'>Art News</h1>
+        <h1 className='page-title' onClick={directHome}>
+          Art News
+        </h1>
         <div className='spacer'>
-          <Form
-            articles={articles}
-            setFiltered={setFiltered}
-            input={input}
-            setInput={setInput}
-          />
+          {!currentArticle && (
+            <Form
+              articles={articles}
+              setFiltered={setFiltered}
+              input={input}
+              setInput={setInput}
+            />
+          )}
         </div>
       </header>
       <div className='component-container'>
         {isLoading === false ? (
           <Routes>
-            {filtered.length === 0 && (
-              <Route
-                path='/'
-                element={
-                  <Articles
-                    articles={articles}
-                    setCurrentArticle={setCurrentArticle}
-                  />
-                }
-              />
-            )}
-            {filtered.length > 0 && (
-              <Route
-                path='/filtered'
-                element={<FilteredPage filtered={filtered} />}
-              />
-            )}
+            <Route
+              path='/'
+              element={
+                <Articles
+                  filtered={filtered}
+                  setCurrentArticle={setCurrentArticle}
+                />
+              }
+            />
             <Route
               path='/article'
               element={<ArticlePage currentArticle={currentArticle} />}
@@ -106,8 +102,8 @@ function App() {
             <ReactLoading
               type='spinningBubbles'
               color='#0E1117'
-              height={667}
-              width={375}
+              height={200}
+              width={200}
             />
           </div>
         )}
