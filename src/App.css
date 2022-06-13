@@ -31,7 +31,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20vw;
+  width: 25vw;
 }
 
 .back-arrow {
@@ -39,8 +39,13 @@ p {
   cursor: pointer;
 }
 
+.back-arrow:hover {
+  transform: translateX(-1em);
+  transition: 500ms;
+}
+
 .page-title {
-  width: 60vw;
+  width: 50vw;
   cursor: pointer;
 }
 
@@ -48,7 +53,7 @@ p {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 20vw;
+  width: 25vw;
 }
 
 .loading-page {
@@ -57,4 +62,23 @@ p {
   align-items: center;
   height: 55vh;
   background-color: white;
+}
+
+/* ------------------ breakpoints ------------------ */
+
+@media screen and (max-width: 900px) {
+  .App-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-title {
+    width: 100vw;
+  }
+
+  .back-arrow {
+    height: 5vh;
+    margin-top: 1vh;
+  }
 }

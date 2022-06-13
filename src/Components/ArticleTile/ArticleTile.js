@@ -8,7 +8,6 @@ const ArticleTile = ({
   abstract,
   url,
   byline,
-  published,
   image,
   alt,
   setCurrentArticle,
@@ -29,8 +28,6 @@ const ArticleTile = ({
         <div className='content'>
           <h2 className='article-title info'>{title}</h2>
           <p className='article-byline info'>{byline} </p>
-          <p className='article-published info'>{published} </p>
-          {/* <img className='arrow info' src={arrow} alt='arrow png' /> */}
         </div>
         <img src={image} alt={alt} className='article-image' />
       </div>

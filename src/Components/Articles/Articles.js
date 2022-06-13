@@ -13,11 +13,9 @@ const Articles = ({ filtered, setCurrentArticle }) => {
       abstract={article.abstract}
       url={article.url}
       byline={article.byline}
-      published={article.published_date}
       image={article.multimedia[1].url}
       alt={article.multimedia[0].caption}
       setCurrentArticle={setCurrentArticle}
-      // articles={articles}
       filtered={filtered}
     />
   ))

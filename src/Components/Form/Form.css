@@ -1,17 +1,26 @@
 .dropdown {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 12vw;
+  justify-content: center;
+  width: 20vw;
   margin-bottom: 1vh;
 }
 
 .search-icon {
-  /* height: 3vh; */
   margin: 0;
   cursor: pointer;
 }
 
-/* * {
-  border: 1px solid blue;
-} */
+/* ------------------ breakpoints ------------------ */
+
+@media screen and (max-width: 900px) {
+  .dropdown {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown {
+    width: 50vw;
+  }
+}
