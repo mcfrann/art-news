@@ -1,10 +1,10 @@
 import './Articles.css'
 import ArticleTile from '../ArticleTile/ArticleTile'
 
-const Articles = ({ articles, setCurrentArticle }) => {
+const Articles = ({ filtered, setCurrentArticle }) => {
   let counter = 0
 
-  const tiles = articles.map((article) => (
+  const tiles = filtered.map((article) => (
     <ArticleTile
       id={(counter += 1)}
       key={counter}
@@ -17,13 +17,22 @@ const Articles = ({ articles, setCurrentArticle }) => {
       image={article.multimedia[1].url}
       alt={article.multimedia[0].caption}
       setCurrentArticle={setCurrentArticle}
-      articles={articles}
+      // articles={articles}
+      filtered={filtered}
     />
   ))
 
   return (
     <section className='articles-section'>
-      <div className='tiles-container'>{tiles}</div>
+      <div className='tiles-container'>
+        {filtered.length > 0 ? (
+          tiles
+        ) : (
+          <div className='empty-page'>
+            <h2>There aren't any articles of that genre at the moment.</h2>
+          </div>
+        )}
+      </div>
     </section>
   )
 }
