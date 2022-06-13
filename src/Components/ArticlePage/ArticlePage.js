@@ -1,6 +1,11 @@
 import './ArticlePage.css'
+import { useEffect } from 'react'
 
 const ArticlePage = ({ currentArticle }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <section className='selected-article'>
       <h2 className='current-article-title'>{currentArticle.title}</h2>
