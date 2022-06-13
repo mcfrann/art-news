@@ -3,7 +3,7 @@ import './Form.css'
 const Form = ({ articles, setFiltered, input, setInput }) => {
   const handleClick = (e) => {
     e.preventDefault()
-    if (input.toLowerCase() != 'All') {
+    if (input != 'All') {
       const filtered = articles.filter(
         (article) => article.section === input.toLowerCase()
       )
