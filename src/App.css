@@ -46,3 +46,8 @@ p {
 .spacer {
   width: 15vw;
 }
+
+.loading-page {
+  height: 55vh;
+  background-color: white;
+}
