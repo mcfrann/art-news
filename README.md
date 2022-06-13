@@ -6,7 +6,7 @@ Francesca McConnell | [Github](https://github.com/mcfrann), [LinkedIn](https://w
 
 ### Deploy Link
 
-Check out the deployed site [here](https://oracle-ai.herokuapp.com/).
+Check out the deployed site [here](https://your-art-news.herokuapp.com/).
 
 ## Table of Contents
 
