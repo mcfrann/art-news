@@ -3,7 +3,7 @@
 ##### Created by:
 
 Francesca McConnell | [Github](https://github.com/mcfrann), [LinkedIn](https://www.linkedin.com/in/francesca-mcconnell/)
-Spec found [here](https://mod4.turing.edu/projects/take_home/take_home_fe)
+| Spec found [here](https://mod4.turing.edu/projects/take_home/take_home_fe)
 
 ### Deploy Link
 
