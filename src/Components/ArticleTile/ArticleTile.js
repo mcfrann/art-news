@@ -17,7 +17,6 @@ const ArticleTile = ({
 
   const directToArticle = (e) => {
     const targ = e.currentTarget.id - 1
-    console.log('one article', filtered[targ])
     setCurrentArticle((prevArticle) => filtered[targ])
     navigate(`/article`)
   }
