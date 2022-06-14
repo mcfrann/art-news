@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     setLoading()
-  }, articles)
+  }, [articles])
 
   const loadArticles = () => {
     fetchData()
