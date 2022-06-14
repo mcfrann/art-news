@@ -14,9 +14,12 @@ const Form = ({ articles, setFiltered, input, setInput }) => {
   return (
     <form>
       <div className='dropdown'>
-        <label htmlFor='select'>Filter by: </label>
+        <label htmlFor='select' className='filter-by'>
+          Filter by:{' '}
+        </label>
         <select
           id='select'
+          className='select-menu'
           value={input}
           onChange={(e) => setInput(e.target.value)}
         >
